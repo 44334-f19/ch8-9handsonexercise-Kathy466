@@ -1,13 +1,202 @@
 <!DOCTYPE html> 
 <html lang="en"> 
 	<head> 
-		<title>LASTNAME Chapter8-9HandsOnExercise</title> 
+		<title>Nguyen Chapter8-9HandsOnExercise</title> 
 		<meta charset="utf-8"> 
 		<style>
-		
+        
+@media only screen and (max-device-width: 480px) 
+       
+       {div#wrapper {
+            width: 400px;
+        }
+
+        div#header {
+            height: 93px;
+            position: relative;
+        }
+
+        div#header h1 {
+            font-size: 140%;
+        }
+
+        #content {
+            float: none;
+            width: 100%;
+        }
+
+        #navigation {
+            float:none;
+            width: auto;
+        }
+        
+        }   
+		table {margin: auto;
+               border: 5px solid #000;
+               border-spacing: 0px;
+               background-color: blanchedalmond;}
+			td, th	{padding: 0.5em;}
+			caption {font-size: 1 em;}
+			#wrapper {display: flex;
+				      flex-direction: row;}
+			form {font-family: Arial, sans-sans-serif;
+				   padding: 10px;
+				   min-width: 400px;}
+			fieldset {border: 2px ridge #000;
+				      padding: 10px;}
+
+			label {float: left;
+							width: auto;
+							text-align: right;
+							padding-right: 10px;
+							clear: left;
+							margin-top: 10px;}
+			input, textarea {margin-top: 10px;
+				             display: block;}
+			
+			#MusCol1 {flex: 2;}
+			#MusCol2 {flex: 1;}
+			#MusSugg {flex: 2;}
+			input [type="raido"], input[type="checkbox"] {display: inline;}
+
+            
 		</style>
 	</head> 
-<body> 
+    
+<body>
+<h1>Favorite Movie<h1>
+		<table>
+			<caption>Love,Rosie</caption>
+			<thread>
+					<tr>
+							<td headers="Director">Director:</td>
+							<td headers="DN">Christian Ditter</td>
+							<td headers="t"></td>
+							<td headers="w"></td>
+							<td headers="tr"></td>
+							<td headers="f"></td>
+						</tr>
+				</thread>
+				<tbody>
+					<tr>
+						<td headers="Leading Actor">Leading Actor:</td>
+						<td headers="SC">Sam Claftin</td>
+						<td headers="t"></td>
+						<td headers="tr"></td>
+						<td headers="f"></td>
+					</tr>
+
+						<tr>
+							<td headers="LA">Leading Actress:</td>
+							<td headers="LC">Lily Colins</td>
+							<td headers="B"></td>
+							<td headers="B"></td>
+							<td headers="B"></td>
+							<td headers="B"></td>
+						</tr>
+
+						<tr>
+							<td headers="R">Rating:</td>
+							<td headers="I">R</td>
+                            <td headers="B"></td>
+							<td headers="B"></td>
+							<td headers="R"></td>
+							<td headers="B"></td>
+                        </tr>
+                        
+                        <tr>
+							<td headers="D">Description:</td>
+							<td headers="D">Rosie and Alex have been best friends since they were 5, so they couldn't possibly be right for one another...or could they? When it comes to love, life and making the right choices, these two are their own worst enemies.</td>
+                            <td headers="B"></td>
+							<td headers="B"></td>
+							<td headers="R"></td>
+							<td headers="B"></td>
+                        </tr>
+                        <tr>
+                            <td headers="RL">Review Link:</td>
+                            <td headers="OR"><a href="https://variety.com/2014/film/global/film-review-love-rosie-1201323080/"target="_blank">Love, Rosie review</a>
+                            </td>
+                    
+                        </tr>
+					</tbody>
+				</table>    
+                
+                
+            <form method="post">
+            
+            <fieldset>
+                <h1>Music Survey</h1>
+                <p>Required Fields marked with an asterisk *</p>
+				<p> 
+                <h2>Information</h2>
+                <p>
+                    <label for="myName">
+                    <span>*Name:</span>
+                    </label>
+				    <input type="text" id="myName" required="required" placeholder=
+				    "your first and last name"> 
+                </p>
+            
+				
+                <p> 
+				<label fro="myname"> 
+               <span>*Email</span>
+                </label>
+				<input type="text" id="myEmail" required="required" placeholder=
+                "you@yourdomain.com">
+                </p>
+            </fieldset>
+
+                
+                <fieldset id="MusCol1">
+								<legend>Music Genres</legend>
+								Select Status: <br>
+								<input type="radio" name="myStatus" id="P" value="Pop">Pop<br>
+								<input type="radio" name="myStatus" id="R" value="Rap">Rap<br>
+								<input type="radio" name="myStatus" id="I" value="Indie">Indie<br>
+								<input type="radio" name="myStatus" id="H" value="Hip Hop">Hip Hop<br>
+								<input type="radio" name="myStatus" id="O" value="Other">Other<br><br>
+
+								Select Familar Artists : <br>
+								<input type="checkbox" name="myOrg" id="Kacey Musgraves" value="Kacey Musgraves">Kacey Musgraves<br>
+								<input type="checkbox" name="myOrg" id="Beyonce" value="Beyonce">Beyonce<br>
+								<input type="checkbox" name="myOrg" id="Queen" value="Queen">Queen<br>
+								<input type="checkbox" name="myOrg" id="David Bowie" value="David Bowie">David Bowie<br>
+								<input type="checkbox" name="myOrg" id="BTS" value="BTS">BTS<br>
+				</fieldset>
+
+				<fieldset id="MusCol2">
+								<legend>Listening to Music</legend>
+								<label>Where do you listen to music :</label>
+                                <br>
+                                <br>
+								<select size="1" name="Music" id="Music">
+									<option value="Home">Home</option>
+									<option vaclue="Car">Car</option>
+                                    <option
+                                    value="Gym">Gym
+                                    </option>
+                                    <option 
+                                    value="Walking to Class">Walking to Class</option>
+								</select>
+
+				</fieldset>
+
+				<fieldset id="musSugg">
+					<legend>Music Suggestions </legend>
+									<label for="myRating">Who is your favorite musical artist:</label>
+									
+
+									<label for="myComments">*Comments<label>
+                                    <textarea name="comments" rows="4" cols="60"></textarea>
+                                    
+
+									<input id="mySubmit" type="submit" value="Submit">
+                                    <input id="myReset"
+                                    type="reset" value="Reset">		
+                </fieldset>
+                <p>Kathy Nguyen</p>
+                <a href="s524271@nwmissouri.edu">Send an Email </a>
 
 </body> 
 </html> 
